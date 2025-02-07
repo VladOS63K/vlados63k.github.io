@@ -1,0 +1,100 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<title>HTML редактор</title>
+<style>
+h1,h2,h3 {
+color: red;
+font-family: "Arial", Georgia, Serif;
+line-height: 1.3em;
+}
+p {
+color: black;
+font-family: "Arial", Georgia, Serif;
+font-height: 20em;
+}
+a {
+color: purple;
+font-family: "Arial", Georgia, Serif;
+font-height: 20em; 
+}
+
+button {
+width:24px;
+height:24px;
+background-color:blue;
+background-image:url("https://img.icons8.com/material/FFFFFF/24/upload");
+color:white;
+border:0px solid black;
+border-radius: 5px;
+}
+
+button:hover {
+background-color:rgb(99,99,255);
+}
+
+textarea {
+padding:10px;
+border: 2px dashed black;
+border-radius: 5px;
+
+}
+
+#main-div, .textarea {
+color: black;
+font-family: Arial, Georgia, Serif;
+font-height: 20em;
+margin: 5px;
+padding: 10px;
+border-radius: 25px;
+border: 2px solid black;
+}
+</style>
+
+<script>
+const fileinput = document.getElementById("file-select");
+const textarea = document.getElementById("textarea");
+const loadbtn = document.getElementById("load-btn");
+
+let loadedfile = "";
+let filepath = "";
+
+console.log(textarea);
+
+async function loadBtnClick(){
+const options = {
+    types: [
+      {
+        description: 'HTML Files',
+        accept: {
+          'text/html': ['.html'],
+        },
+      },
+    ],
+  };
+	const [fileHandle] = await window.showOpenFilePicker(options);
+	const file = await fileHandle.getFile();
+	const contents = await file.text();
+	console.log(contents);
+	textarea.innerHtml = contents;
+}
+		</script>
+	</head>
+	<body>
+		<a href="https://vlados63k.ucoz.net/index.html">На Главную</a>
+		<h1>Редактор HTML</h1>
+		<div class="main-div">
+			<div class="tool-bar" style="display:flex;">
+				<button id="load-btn" onclick="loadBtnClick()" title="Загрузить файл"></button>
+				<div class="vertical-rule" style="margin-left:10px;margin-right:10px;border-left:1px solid #000;height:24px"></div>
+			</div>
+			<br>
+			
+		</div>
+	<div class="textarea">
+			<textarea id="htmlbox" style="width:100%;height:100%;" title="Пишите HTML код здесь, а если не хватает места, потяните за значок снизу справа.">g</textarea>
+			</div>
+	</body>
+</html>
