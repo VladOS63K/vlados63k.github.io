@@ -52,38 +52,9 @@ border-radius: 25px;
 border: 2px solid black;
 }
 </style>
-
-<script>
-const fileinput = document.getElementById("file-select");
-const textarea = document.getElementById("textarea");
-const loadbtn = document.getElementById("load-btn");
-
-let loadedfile = "";
-let filepath = "";
-
-console.log(textarea);
-
-async function loadBtnClick(){
-const options = {
-    types: [
-      {
-        description: 'HTML Files',
-        accept: {
-          'text/html': ['.html'],
-        },
-      },
-    ],
-  };
-	const [fileHandle] = await window.showOpenFilePicker(options);
-	const file = await fileHandle.getFile();
-	const contents = await file.text();
-	console.log(contents);
-	textarea.innerHtml = contents;
-}
-		</script>
 	</head>
 	<body>
-		<a href="/">На Главную</a>
+		<a href="index.html">На Главную</a>
 		<h1>Редактор HTML</h1>
 		<div class="main-div">
 			<div class="tool-bar" style="display:flex;">
@@ -96,5 +67,34 @@ const options = {
 	<div class="textarea">
 			<textarea id="htmlbox" style="width:100%;height:100%;" title="Пишите HTML код здесь, а если не хватает места, потяните за значок снизу справа.">g</textarea>
 			</div>
+			
+	<script>
+const fileinput = document.getElementById("file-select");
+const textarea = document.getElementById("htmlbox");
+const loadbtn = document.getElementById("load-btn");
+
+let loadedfile = "";
+let filepath = "";
+
+async function loadBtnClick(){
+const options = {
+    types: [
+      {
+        description: 'HTML Files',
+        accept: {
+          'text/html': ['.html'],
+        },
+      },
+    ],
+  };
+  try {
+	const [fileHandle] = await window.showOpenFilePicker(options);
+	const file = await fileHandle.getFile();
+	const contents = await file.text();
+	console.log(contents);
+	textarea.innerText = contents;
+	} catch (err) {console.log (err);}
+}
+		</script>
 	</body>
 </html>
