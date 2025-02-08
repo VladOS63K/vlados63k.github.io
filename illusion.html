@@ -1,0 +1,165 @@
+<meta charset="utf-8">
+<html>
+<head>
+<title>Демо программа</title>
+<style>
+h1 {
+color: red;
+font-family: "Arial", Georgia, Serif;
+line-height: 1.3em;
+}
+h2 {
+font-family: "Arial", Georgia, Serif;
+line-height: 1.3em;
+}
+p {
+color: black;
+font-family: "Arial", Georgia, Serif;
+font-height: 20em;
+}
+a {
+color: purple;
+font-family: "Arial", Georgia, Serif;
+font-height: 20em;
+}
+.canvas-div {
+margin: 5px;
+border-radius: 25px;
+border: 2px solid black;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+div {
+margin: 5px;
+padding: 10px;
+border-radius: 25px;
+border: 2px solid black;
+}
+
+canvas {
+width:100%;
+height:100%;
+}
+</style>
+</head>
+<body>
+<a href="index.html">На Главную</a>
+
+<div class="control-div">
+<h1>Демо программа</h1>
+
+<h2> by Алексей Морозов <a style="border:3px solid black;border-radius:25px;padding:5px;text-decoration:none;color:black;" target="_blank" href="https://www.youtube.com/@Alemorf">Ссылка YouTube</a></h2> 
+
+<button id="play-button" onclick="clickPlay()">Играть</button> <button id="stop-button" onclick="clickStop()">Стоп</button>
+
+<p>Настройки (добавлены от автора сайта)</p>
+
+<p>Количество точек: <input type="range" min="100" max="100000" step="1" value="10000" disabled="false" id="pixCount" oninput="chngPixelCount()"> <input type="text" value="10000" disabled="true" id="pixCountBox"></p>
+<p>Задержка: <input type="range" min="10" max="100" step="0.001" value="10" disabled="false" id="timeout" oninput="chngTimeout()"> <input type="text" value="10" disabled="true" id="timeoutBox"></p>
+</div>
+
+<div class="canvas-div">
+<canvas id="canvas">
+</div>
+<script>
+c = document.querySelector("canvas").getContext("2d");
+canvas = document.getElementById("canvas")
+
+c.width = 900;
+c.height = 900;
+
+pixelCount = 10000;
+t = 1;
+playing = true;
+timeout = 10;
+
+function chngPixelCount() {
+    pixelCount = document.getElementById("pixCount").value;
+	document.getElementById("pixCountBox").value = pixelCount;
+	t = 1;
+   }
+   
+function clickPlay() {
+	if (playing == false) {
+	playing = true;
+	c.fillStyle = "rgba(255, 255, 255, 1)";
+    c.fillRect(0, 0, canvas.width, canvas.height);
+	document.getElementById("pixCount").disabled = true;
+	document.getElementById("timeout").disabled = true;
+	document.getElementById("figureColor").disabled = true;
+	document.getElementById("randomcolor-button").disabled = true;
+	
+	loop();
+	}
+}
+
+function clickStop() {
+	if (playing == true) {
+	playing = false;
+	c.fillStyle = "#FFFFFF";
+    c.fillRect(0, 0, canvas.width, canvas.height);
+	c.fillStyle = "#00F";
+    c.strokeStyle = "#F00";
+    c.font = "bold italic 30pt Arial";
+    c.fillText("Анимация остановлена", 20, 50);
+	document.getElementById("pixCount").disabled = false;
+	document.getElementById("timeout").disabled = false;
+	document.getElementById("figureColor").disabled = false;
+	document.getElementById("randomcolor-button").disabled = false;
+	}
+}
+
+function chngTimeout() {
+    timeout = document.getElementById("timeout").value;
+	document.getElementById("timeoutBox").value = timeout;
+	setInterval(loop,timeout);
+	t = 1;
+   }
+
+function loop() {
+	
+	if (!playing) return
+    t += 0.0025;
+
+    if (t >= 1) {
+        t = 0;
+
+        k = -1.5 - Math.floor(Math.random() * 10) / 2;
+        p = 2 + Math.floor(Math.random() * 10 / -k);
+
+        s = Math.PI * 2 / pixelCount;
+        if (k != Math.floor(k))
+            s *= Math.pow(2, p - 1);
+
+        color = "rgb(" + Math.floor(Math.random() * 222)
+                 + "," + Math.floor(Math.random() * 222)
+                 + "," + Math.floor(Math.random() * 222) + ")";
+    }
+
+    d = Math.sin(t * Math.PI) * 0.75;
+
+    c.fillStyle = "rgba(255, 255, 255, 0.05)";
+    c.fillRect(0, 0, canvas.width, c.height);
+    c.fillStyle = color;
+
+    for (i = 0; i < pixelCount; i++) {
+        x = 0;
+        y = 0;
+        for (j = 0; j < p; j++) {
+            x += Math.pow(d, j) * Math.sin(t + Math.pow(k, j) * i * s);
+            y += Math.pow(d, j) * Math.cos(t + Math.pow(k, j) * i * s);
+        }
+        c.fillRect(canvas.width / 2 + 50 * x, canvas.height / 2 + 50 * y, 1, 1);
+    }
+	
+	
+}
+
+setInterval(loop,timeout);
+
+</script>
+</body>
+</html>
+
