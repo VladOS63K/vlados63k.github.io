@@ -59,7 +59,7 @@ height:100%;
 
 <p>Настройки (добавлены от автора сайта)</p>
 
-<p>Цвет фигуры: <input type="color" id="figureColor"></p>
+<p>Цвет фигуры: <input type="color" disaled="true" id="figureColor"></p>
 <p>Количество точек: <input type="range" min="100" max="100000" step="1" value="10000" disabled="false" id="pixCount" oninput="chngPixelCount()"> <input type="text" value="10000" disabled="true" id="pixCountBox"></p>
 <p>Задержка: <input type="range" min="10" max="100" step="0.001" value="10" disabled="false" id="timeout" oninput="chngTimeout()"> <input type="text" value="10" disabled="true" id="timeoutBox"></p>
 </div>
@@ -93,7 +93,6 @@ function clickPlay() {
 	document.getElementById("pixCount").disabled = true;
 	document.getElementById("timeout").disabled = true;
 	document.getElementById("figureColor").disabled = true;
-	document.getElementById("randomcolor-button").disabled = true;
 	
 	loop();
 	}
@@ -111,7 +110,6 @@ function clickStop() {
 	document.getElementById("pixCount").disabled = false;
 	document.getElementById("timeout").disabled = false;
 	document.getElementById("figureColor").disabled = false;
-	document.getElementById("randomcolor-button").disabled = false;
 	}
 }
 
