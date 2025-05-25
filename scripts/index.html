@@ -20,20 +20,27 @@
             flex-wrap: wrap;
         }
 
+        #img-dialog {
+            padding: 5px;
+            border: 2px solid black;
+            border-radius: 5px;
+
+            &::backdrop {
+                filter: blur(5px);
+            }
+        }
+
         .prog-div {
+            width: auto;
             padding: 5px;
             background-color: white;
             padding: 20px;
             border-radius: 5px;
         }
 
-        .prog-content-div {
-            display: flex;
-            justify-content: center;
-        }
-
         .download-link {
-            margin-bottom: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
         }
 
         p {
@@ -47,18 +54,24 @@
 </head>
 
 <body>
+    <dialog id="img-dialog">
+        <img src="" alt="Картинка программы">
+        <button id="close-img-dlg-btn">Close</button>
+    </dialog>
+
     <h1>Полезные приложения</h1>
     <h2> работающие на PowerShell.</h2>
     <p>Для запуска прямо с сайта нужно скачать <a href="/scripts/RunSetup.exe">пускатель</a> скриптов.</p>
 
     <div class="progs-list-div">
         <div class="prog-div">
-            <div class="prog-content-div">
-                <a href="/scripts/ImgViewer.ps1" class="download-link">Простой просмотрщик изображений</a><br />
-                <a href="pwshell://vlados63k.github.io/scripts/ImgViewer.ps1" class="run-link">(Запустить)</a>
-            </div>
+            <img src="/scripts/ImgViewer.png" width="32px" height="32px">
+            <a onclick="showDlg(1)" class="download-link">Простой просмотрщик изображений</a>
+            <a href="pwshell://vlados63k.github.io/scripts/ImgViewer.ps1" class="run-link">(Запустить)</a>
         </div>
     </div>
+
+    <script src="/scripts/index.js"></script>
 </body>
 
 </html>
