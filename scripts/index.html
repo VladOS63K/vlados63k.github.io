@@ -31,11 +31,15 @@
         }
 
         .prog-div {
+            display: flex;
             width: auto;
             padding: 5px;
             background-color: white;
             padding: 20px;
             border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
         }
 
         .download-link {
@@ -54,8 +58,8 @@
 </head>
 
 <body>
-    <dialog id="img-dialog">
-        <img src="" alt="Картинка программы">
+    <dialog id="Img-dialog">
+        <img src="/scripts/ImgViewer.png" alt="Картинка программы" id="Img-dlg">
         <button id="close-img-dlg-btn">Close</button>
     </dialog>
 
@@ -66,7 +70,7 @@
     <div class="progs-list-div">
         <div class="prog-div">
             <img src="/scripts/ImgViewer.png" width="32px" height="32px">
-            <a onclick="showDlg(1)" class="download-link">Простой просмотрщик изображений</a>
+            <a onclick="showDlg('/scripts/ImgViewer.png');" class="download-link">Простой просмотрщик изображений</a>
             <a href="pwshell://vlados63k.github.io/scripts/ImgViewer.ps1" class="run-link">(Запустить)</a>
         </div>
     </div>

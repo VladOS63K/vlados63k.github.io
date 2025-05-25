@@ -1,12 +1,12 @@
-const imgDialog = document.getElementById("img-dialog")
-const dlgImg = imgDialog.childNodes[0]
+const Imgdlg = document.getElementById("Img-dialog");
+const dlgImg = document.getElementById("Img-dlg");
 
 
 function showDlg(imgPath) {
-    if (imgPath === 1) dlgImg.src = "/scripts/ImgViewer.png";
-    imgDialog.showModal();
+    dlgImg.src = "/scripts/ImgViewer.png";
+    Imgdlg.showModal();
 }
 
 document.getElementById("close-img-dlg-btn").addEventListener("click", () => {
-    imgDialog.close();
+    Imgdlg.close();
 })
