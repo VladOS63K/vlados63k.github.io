@@ -21,14 +21,14 @@
         }
 
         .prog-div {
-            display: flex;
             padding: 5px;
             background-color: white;
             padding: 20px;
             border-radius: 5px;
-            align-items: flex-start;
-            align-content: flex-start;
-            flex-wrap: wrap;
+        }
+
+        .prog-content-div {
+            display: flex;
             justify-content: center;
         }
 
@@ -53,9 +53,11 @@
 
     <div class="progs-list-div">
         <div class="prog-div">
-            <img src="/scripts/ImgViewer.png" width="500px" height="500px"><br />
-            <a href="/scripts/ImgViewer.ps1" class="download-link">Простой просмотрщик изображений</a><br />
-            <a href="pwshell://vlados63k.github.io/scripts/ImgViewer.ps1" class="run-link">(Запустить)</a>
+            <div class="prog-content-div">
+                <img src="/scripts/ImgViewer.png" width="500px" height="500px"><br />
+                <a href="/scripts/ImgViewer.ps1" class="download-link">Простой просмотрщик изображений</a><br />
+                <a href="pwshell://vlados63k.github.io/scripts/ImgViewer.ps1" class="run-link">(Запустить)</a>
+            </div>
         </div>
     </div>
 </body>
