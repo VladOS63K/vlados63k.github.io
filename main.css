@@ -17,6 +17,10 @@
 body {
     font-family: "Arial", Georgia, Serif;
     background: fixed url("/backgrnd.jpg");
+    
+}
+
+body::backdrop {
     filter: blur(3);
 }
 
