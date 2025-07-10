@@ -17,8 +17,7 @@
 body {
     font-family: "Arial", Georgia, Serif;
     background: fixed url("/backgrnd.jpg");
-    backdrop-filter: blur(5px);
-    
+    filter: blur(5px);
 }
 
 p {
