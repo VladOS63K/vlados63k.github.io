@@ -24,6 +24,7 @@ body {
 
 .link-btn {
     padding:15px;
+    text-decoration: none;
     color: white;
     background: rgb(250, 100, 55);
     border-radius: 5px;
