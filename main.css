@@ -16,7 +16,9 @@
 
 body {
     display: flex;
+    overflow-x:hidden;
     justify-content: center;
+    align-items: center;
     font-family: "Arial", sans-serif;
 }
 
@@ -24,7 +26,6 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    overflow: hidden;
     background-image: url("/backgrnd.jpg");
     background-size: cover;
     background-position: center;
