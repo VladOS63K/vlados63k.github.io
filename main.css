@@ -15,21 +15,19 @@
 }
 
 body {
-    font-family: "Arial", Georgia, Serif;
+    display: flex;
     justify-content: center;
+    font-family: "Arial", sans-serif;
 }
 
 .background {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            background-image: url("/backgrnd.jpg");
-            background-size: cover;
-            background-position: center;
-            filter: blur(10px);
-            z-index: -1;
-        }
-
-p {
-    color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-image: url("/backgrnd.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
 }
