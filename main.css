@@ -13,7 +13,9 @@ body {
     height: 100%;
     width: 100%;
     background-image: url("/backgrnd.jpg");
-    background-size: cover;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-size: auto;
     background-position: center;
     filter: blur(5px);
     z-index: -1;
