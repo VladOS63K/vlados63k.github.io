@@ -1,11 +1,32 @@
+@media screen and (max-width:1024px){
+    .mobile-hide {
+        display: none;
+    }
+}
+
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
 body {
     display: flex;
     overflow-x:hidden;
     justify-content: center;
     align-items: center;
     flex-flow: column;
+}
 
-    font-family: "Arial", sans-serif;
+.link-btn {
+    padding:15px;
+    color: white;
+    background: rgb(250, 100, 55);
+    border-radius: 5px;
 }
 
 .background {
