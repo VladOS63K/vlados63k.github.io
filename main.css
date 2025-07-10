@@ -9,14 +9,9 @@ body {
 }
 
 .background {
-    position: absolute;
-    height: 100%;
-    width: 100%;
     background-image: url("/backgrnd.jpg");
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-clip: border-box;
-    background-size: auto;
+    background-size: cover;
     background-position: center;
-    filter: blur(5px);
-    z-index: -1;
 }
