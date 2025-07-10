@@ -1,0 +1,29 @@
+@media screen and (max-width:1024px) {
+    body {
+        background: scroll url("/backgrnd.jpg");
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    body {
+        background: fixed url("/backgrnd.jpg");
+    }
+}
+
+body {
+    font-family: "Arial", Georgia, Serif;
+    background: fixed url("/backgrnd.jpg");
+    filter: blur(3);
+}
+
+p {
+    color: black;
+}
+
+a {
+    color: purple;
+}
