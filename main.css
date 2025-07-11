@@ -55,7 +55,7 @@ body {
 #comments-app-mmKpDrDI-1 {
     border: 3px solid white;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .background {
