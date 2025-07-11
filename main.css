@@ -20,7 +20,7 @@ body {
     overflow-x:hidden;
     justify-content: center;
     align-items: center;
-    flex-flow: column;
+    flex-direction: column;
 }
 
 .large {
