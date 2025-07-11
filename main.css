@@ -23,12 +23,24 @@ body {
     flex-flow: column;
 }
 
+.large {
+    font-size: large;
+}
+
+.large {
+    font-size: larger;
+}
+
+.bold {
+    font-weight: bold;
+}
+
 .link-btn {
     padding:15px;
     text-decoration: none;
     color: white;
     background: rgb(250, 100, 55);
-    border-radius: 5px;
+    border-radius: 100vw;
 }
 
 .background {
