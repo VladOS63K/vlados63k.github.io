@@ -39,6 +39,11 @@ body {
     margin-top: 10px;
 }
 
+.warning-accent {
+    background-color: rgb(255, 61, 61);
+    font-weight: bolder;
+}
+
 .link-btn {
     padding:15px;
     text-decoration: none;
