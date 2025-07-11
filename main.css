@@ -52,6 +52,11 @@ body {
     border-radius: 10px;
 }
 
+#comments-app-mmKpDrDI-1 {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
 .background {
     background-color: rgb(0,0,0,0.25);
     background-image: url("/backgrnd.jpg");
