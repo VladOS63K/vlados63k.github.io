@@ -24,11 +24,11 @@ body {
 }
 
 .large {
-    font-size: large;
+    font-size: 36px;
 }
 
-.large {
-    font-size: larger;
+.larger {
+    font-size: 48px;
 }
 
 .bold {
