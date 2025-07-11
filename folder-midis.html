@@ -4,46 +4,25 @@
 <head>
     <title>Файлы: Папка "midis"</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <style>
-        body {
-            background: linear-gradient(#e66465, #9198e5);
-        }
-
-        h1 {
-            color: red;
-            font-family: "Arial", Georgia, Serif;
-            line-height: 1.3em;
-        }
-
-        h2 {
-            font-family: "Arial", Georgia, Serif;
-            line-height: 1.3em;
-        }
-
-        p {
-            color: black;
-            font-family: "Arial", Georgia, Serif;
-        }
-
-        a {
-            color: purple;
-            font-family: "Arial", Georgia, Serif;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/main.css">
 </head>
 
-<body>
-    <a href="index.html">На Главную</a>
-    <p></p>
-    <a href="files.html">-- На страницу "Файлы"</a>
+<body class="background roboto-regular">
+    <div class="header">
+        <img src="/Avatar.png" width="256px" height="256px">
+        <div class="header-desc large bold">
+            <a href="index.html">На Главную</a>
+            <a href="files.html">-- На страницу "Файлы"</a>
+            Файлы - папка midis
+        </div>
+    </div>
 
-    <h1>Файлы</h1>
-    <h2>-- Папка "midis"</h2>
-
-    <a href="midis/zashim.mid">Славянский зажим MIDI</a> <a href="midis/zashim.mp3">(Послушать без программ)</a>
+    <a href="midis/zashim.mid" class="link-btn">Славянский зажим MIDI</a> <a href="midis/zashim.mp3">(Послушать без программ)</a>
     <br />
-    <a href="midis/MI.mid">Mi MIAMI MIDI</a> <a href="midis/MI.mp3">(Послушать без программ)</a>
-    <p></p>
+    <a href="midis/MI.mid" class="link-btn">Mi MIAMI MIDI</a> <a href="midis/MI.mp3">(Послушать без программ)</a>
 </body>
 
 </html>
