@@ -14,7 +14,7 @@
             justify-content: center;
         }
 
-        div {
+        .control-div .canvas-div {
             margin: 5px;
             padding: 10px;
             border-radius: 25px;
@@ -67,8 +67,8 @@
         c = document.querySelector("canvas").getContext("2d");
         canvas = document.getElementById("canvas")
 
-        c.width = 900;
-        c.height = 900;
+        canvas.width = 900;
+        canvas.height = 900;
 
         pixelCount = 10000;
         t = 1;
@@ -98,7 +98,7 @@
             if (playing == true) {
                 playing = false;
                 c.fillStyle = "#FFFFFF";
-                c.fillRect(0, 0, c.width, c.height);
+                c.fillRect(0, 0, canvas.width, canvas.height);
                 c.fillStyle = "#00F";
                 c.strokeStyle = "#F00";
                 c.font = "bold italic 16pt Arial";
@@ -137,7 +137,7 @@
             d = Math.sin(t * Math.PI) * 0.75;
 
             c.fillStyle = "rgba(255, 255, 255, 0.05)";
-            c.fillRect(0, 0, c.width, c.height);
+            c.fillRect(0, 0, canvas.width, canvas.height);
             c.fillStyle = color;
 
             for (i = 0; i < pixelCount; i++) {
@@ -147,7 +147,7 @@
                     x += Math.pow(d, j) * Math.sin(t + Math.pow(k, j) * i * s);
                     y += Math.pow(d, j) * Math.cos(t + Math.pow(k, j) * i * s);
                 }
-                c.fillRect(c.width / 2 + 50 * x, c.height / 2 + 50 * y, 1, 1);
+                c.fillRect(canvas.width / 2 + 50 * x, canvas.height / 2 + 50 * y, 1, 1);
             }
 
 
