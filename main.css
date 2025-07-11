@@ -40,7 +40,7 @@ body {
     text-decoration: none;
     color: white;
     background: rgb(250, 100, 55);
-    border-radius: 100vw;
+    border-radius: 10px;
 }
 
 .background {
