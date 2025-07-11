@@ -35,6 +35,10 @@ body {
     font-weight: bold;
 }
 
+.coments {
+    margin-top: 10px;
+}
+
 #comments-app-mmKpDrDI-1 {
     width: 100%;
     display:flex;
