@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Base64 Image Viewer</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body,html {
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script>
+        let img = null;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            img = document.querySelector("img")[0];
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const myParam = urlParams.get("img");
+
+            img.src = "data:image/png;base64,"+myParam;
+        });
+    </script>
+</head>
+<body>
+    <img src="https://img.icons8.com/96/sand%20clock/">
+</body>
+</html>
