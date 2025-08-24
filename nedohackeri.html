@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -7,18 +8,36 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <style>
         * {
-            margin:0;
-            padding:0;
+            margin: 0;
+            padding: 0;
             overflow: hidden;
         }
 
         video {
-            width:100%;
-            height:100%;
+            width: 100%;
+            height: 100%;
         }
     </style>
+    <script type="text/javascript">
+        window.onload = maxWindow;
+        function maxWindow() {
+            window.moveTo(0, 0);
+            if (document.all) {
+                top.window.resizeTo(screen.availWidth, screen.availHeight);
+            }
+
+            else if (document.layers || document.getElementById) {
+                if (top.window.outerHeight < screen.availHeight || top.window.outerWidth < screen.availWidth) {
+                    top.window.outerHeight = screen.availHeight;
+                    top.window.outerWidth = screen.availWidth;
+                }
+            }
+        }
+    </script>
 </head>
+
 <body>
     <video loop autoplay src="/rickroll.mp4"></video>
 </body>
+
 </html>
