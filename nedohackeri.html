@@ -37,14 +37,17 @@
             } else if (document.documentElement.msRequestFullscreen) {
                 document.documentElement.msRequestFullscreen();
             }
-            document.querySelector("video").play();
+
+            document.querySelector("video").onclick = function() {
+                document.querySelector("video").play();
+            }
         });
     </script>
 </head>
 
 <body>
     <p>кликни</p>
-    <video loop autoplay controls src="/rickroll.mp4"></video>
+    <video loop src="/rickroll.mp4"></video>
 </body>
 
 </html>
