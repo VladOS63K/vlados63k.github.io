@@ -28,7 +28,8 @@
     </style>
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function () {
-            if (document.documentElement.requestFullscreen) {
+            document.querySelector("video").onclick = function() {
+                if (document.documentElement.requestFullscreen) {
                 document.documentElement.requestFullscreen();
             } else if (document.documentElement.mozRequestFullScreen) {
                 document.documentElement.mozRequestFullScreen();
@@ -37,8 +38,6 @@
             } else if (document.documentElement.msRequestFullscreen) {
                 document.documentElement.msRequestFullscreen();
             }
-
-            document.querySelector("video").onclick = function() {
                 document.querySelector("video").play();
             }
         });
