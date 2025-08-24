@@ -18,26 +18,21 @@
             height: 100%;
         }
     </style>
-    <script type="text/javascript">
-        window.onload = maxWindow;
-        function maxWindow() {
-            window.moveTo(0, 0);
-            if (document.all) {
-                top.window.resizeTo(screen.availWidth, screen.availHeight);
-            }
-
-            else if (document.layers || document.getElementById) {
-                if (top.window.outerHeight < screen.availHeight || top.window.outerWidth < screen.availWidth) {
-                    top.window.outerHeight = screen.availHeight;
-                    top.window.outerWidth = screen.availWidth;
-                }
-            }
-        }
-    </script>
 </head>
-
 <body>
     <video loop autoplay src="/rickroll.mp4"></video>
+    <script type="text/javascript">
+        if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen();
+        } else if (document.documentElement.mozRequestFullScreen) {
+            document.documentElement.mozRequestFullScreen();
+        } else if (document.documentElement.webkitRequestFullscreen) {
+            document.documentElement.webkitRequestFullscreen();
+        } else if (document.documentElement.msRequestFullscreen) {
+            document.documentElement.msRequestFullscreen();
+        }
+        document.querySelector("video").play();
+    </script>
 </body>
 
 </html>
