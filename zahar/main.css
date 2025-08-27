@@ -34,6 +34,12 @@ body {
     margin-top:15px;
 }
 
+.clicks-count {
+    padding:5px;
+    background: #212a33;
+    border-radius: 10px;
+}
+
 .clicks-count span {
     margin:0;
     padding:0;
