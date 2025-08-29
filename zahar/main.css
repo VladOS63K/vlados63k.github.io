@@ -69,10 +69,12 @@ body {
 
 .button {
     border-radius: 100%;
+    width:350px;
+    height:350px;
     background: url("/zahar/zahar-round.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    /*background-size: contain;*/
     image-rendering: smooth;
     transition-duration: 0.5s;
 }
