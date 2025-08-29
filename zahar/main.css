@@ -62,7 +62,7 @@ body {
 
 .button:active {
     transform: scale(1);
-    filter:brightness(10);
+    filter:brightness(200);
 }
 
 .button:not(:hover) {
