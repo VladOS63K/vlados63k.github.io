@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded',function() {
     test_readbtn = document.getElementById('read');
 
     test_writebtn.onclick = function() {
-        window.Telegram.CloudStorage.setItem(test_key.value,test_value.value);
+        window.Telegram.WebApp.CloudStorage.setItem(test_key.value,test_value.value);
     }
     test_readbtn.onclick = function() {
-        window.Telegram.CloudStorage.getItem(test_key.value,function(error,data){
+        window.Telegram.WebApp.CloudStorage.getItem(test_key.value,function(error,data){
             if (error != null) {
                 test_title = error;
             }
