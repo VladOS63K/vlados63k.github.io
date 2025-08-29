@@ -42,6 +42,7 @@
 
 html {
     transition-duration: 0.5s;
+    user-select:none;
 }
 
 body {
