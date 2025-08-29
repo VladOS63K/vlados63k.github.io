@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded',function() {
     test_readbtn.onclick = function() {
         window.Telegram.WebApp.CloudStorage.getItem(test_key.value,function(error,data){
             if (error != null) {
-                test_title = error;
+                test_title.innerHTML = error;
             }
             else {
-                test_title = data;
+                test_title.innerHTML = data;
             }
         });
     }
