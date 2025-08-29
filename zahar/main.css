@@ -23,6 +23,10 @@
     font-size: 12pt;
 }
 
+html {
+    transition-duration: 0.5s;
+}
+
 body {
     display:flex;
     background: #2e3740;
@@ -48,6 +52,19 @@ body {
 
 .button {
     border-radius: 100%;
-    background: #212a33;
-    /*padding:5px;*/
+    /*background: #212a33;*/
+    transition-duration: 0.5s;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.button:active {
+    transform: scale(1);
+    filter:brightness(10);
+}
+
+.button:not(:hover) {
+    transform: scale(1);
 }
