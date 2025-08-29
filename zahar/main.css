@@ -76,7 +76,7 @@ body {
 }
 
 .button img {
-    image-rendering:optimizeSpeed;
+    image-rendering:crisp-edges;
 }
 
 .button:active {
