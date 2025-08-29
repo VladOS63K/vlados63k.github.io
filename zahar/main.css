@@ -71,15 +71,14 @@ body {
     border-radius: 100%;
     width:350px;
     height:350px;
-    background: url("/zahar/zahar-round.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
     image-rendering: smooth;
     transition-duration: 0.5s;
 }
 
+.button img {
+    image-rendering: smooth;
+}
+
 .button:active {
-    transform: scale(1);
     filter: brightness(0.9);
 }
