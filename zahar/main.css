@@ -76,7 +76,7 @@ body {
 }
 
 .button img {
-    image-rendering:optimizeQuality;
+    image-rendering:optimizeSpeed;
 }
 
 .button:active {
