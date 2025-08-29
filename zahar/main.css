@@ -38,7 +38,7 @@ body {
     padding:10px;
     background: #212a33;
     border-radius: 15px;
-    margin-bottom: bottom top 35px;
+    margin: bottom top 35px;
 }
 
 .clicks-count span {
