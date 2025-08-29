@@ -48,7 +48,7 @@ html {
 body {
     display: flex;
     background: var(--tg-theme-bg-color)/*#2e3740*/;
-    color: white;
+    color: var(--tg-theme-text-color);
     flex-direction: column;
     justify-content: center;
     align-items: center;
