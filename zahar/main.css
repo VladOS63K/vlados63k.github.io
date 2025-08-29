@@ -76,7 +76,7 @@ body {
 }
 
 .button img {
-    image-rendering: smooth;
+    image-rendering:optimizeQuality;
 }
 
 .button:active {
