@@ -1,5 +1,5 @@
-window.Telegram.WebApp.lockOrientation();
+
 
 document.addEventListener('DOMContentLoaded',function() {
-
+    window.Telegram.WebApp.lockOrientation();
 });
