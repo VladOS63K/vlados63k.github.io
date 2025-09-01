@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const button = document.getElementById('button');
     const settings = document.getElementById('settings');
     const stateText = document.getElementById('state');
-    const update = document.getElementById('update');
+    const update = document.getElementById('updatebtn');
 
     window.chrome.webview.addEventListener("message", function (e) {
         if (e.data.Key == "state") {
