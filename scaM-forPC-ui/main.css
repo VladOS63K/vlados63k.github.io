@@ -100,7 +100,7 @@ body {
 
 .update-div {
     display:none;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     position: absolute;
     top:15px;
@@ -116,6 +116,7 @@ body {
 
 .update-div div {
     color:black;
+    margin-left:5px;
 }
 
 .update-div button {
