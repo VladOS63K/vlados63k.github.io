@@ -1,0 +1,120 @@
+html, body {
+    height: 98.5%;
+    /*overflow: hidden*/;
+    user-select: none;
+    background:transparent;
+    background: linear-gradient(transparent 0%,#313131 3%);
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #313131;
+    background: linear-gradient(200deg,#313131 0%, rgba(54, 54, 54, 1) 45%, rgba(128, 0, 0, 1) 140%);
+    margin:0;
+    margin-top: 15px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: rgb(226, 226, 226);
+
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    
+}
+
+.title {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:45px;
+    filter: drop-shadow(0px 0px 20px #8a0000);
+}
+
+.title img {
+    margin-right:10px;
+    filter: drop-shadow(0px 0px 20px #8a0000);
+}
+
+.outer-button {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: #8a0000;
+    background:linear-gradient(90deg,#8a0000 0%,#FF0000 100%);
+    border-radius: 100%;
+    padding:3px;
+    margin-top: 5px;
+    transition-duration: 0.2s;
+    filter: drop-shadow(0px 0px 20px #8a0000);
+}
+
+.outer-button:active {
+    transform: scale(0.9);
+}
+
+.button {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:#535353;
+    border-radius: 100%;
+    padding:5px;
+    cursor:pointer;
+}
+
+.inner-button {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    padding:25px;
+    background:#808080;
+    border-radius: 100%;
+}
+
+.bottom-bar {
+    background: rgba(255, 255, 255, 0.100);
+    border-radius: 5px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    position: fixed;
+    bottom:5px;
+    left:5px;
+    right:5px;
+    height:75px;
+    filter: drop-shadow(0px 0px 20px #8a0000);
+}
+
+.large-text {
+    font-size: 24px;
+}
+
+.larger-text {
+    font-size: 36px;
+}
+
+.small-text {
+    font-size: 12px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.btn {
+    padding:5px;
+    background: grey;
+    border: 0px solid black;
+    border-radius: 5px;
+    cursor:pointer;
+}
