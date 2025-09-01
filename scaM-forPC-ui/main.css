@@ -36,6 +36,10 @@ body {
     
 }
 
+button {
+    cursor: pointer;
+}
+
 .title {
     display:flex;
     justify-content: center;

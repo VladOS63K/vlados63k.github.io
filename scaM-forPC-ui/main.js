@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const button = document.getElementById('button');
     const settings = document.getElementById('settings');
     const stateText = document.getElementById('state');
+    const update = document.getElementById('update');
 
     window.chrome.webview.addEventListener("message", function (e) {
         if (e.data.Key == "state") {
@@ -31,6 +32,13 @@ document.addEventListener('DOMContentLoaded', function () {
     settings.onclick = function () {
         window.chrome.webview.postMessage({
             Key: "settings",
+            Value: null
+        });
+    }
+
+    update.onclick = function () {
+        window.chrome.webview.postMessage({
+            Key: "update",
             Value: null
         });
     }
