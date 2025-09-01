@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 stateText.innerHTML = "отключен";
             }
         }
+        if (e.data.Key == "updateavailable") {
+            document.querySelector('.update-div').style.display = 'flex';
+        }
     });
 
     button.onclick = function () {

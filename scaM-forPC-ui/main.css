@@ -1,3 +1,12 @@
+@keyframes update-show {
+    0% {
+        top: -50px;
+    }
+    100% {
+        top: 15px;
+    }
+}
+
 html, body {
     height: 98.5%;
     /*overflow: hidden*/;
@@ -87,6 +96,38 @@ body {
     right:5px;
     height:75px;
     filter: drop-shadow(0px 0px 20px #8a0000);
+}
+
+.update-div {
+    display:none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:15px;
+    left:5px;
+    right:5px;
+    height:40px;
+    background: white;
+    border: 0px solid black;
+    border-radius: 5px;
+    animation-name: update-show;
+    animation-duration: 1s;
+}
+
+.update-div div {
+    color:black;
+}
+
+.update-div button {
+    background:green;
+    color:white;
+    position:absolute;
+    right:5px;
+    top:5px;
+    bottom:5px;
+    width:100px;
+    border: 0px solid black;
+    border-radius: 5px;
 }
 
 .large-text {
