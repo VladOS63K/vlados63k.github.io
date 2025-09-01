@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         if (e.data.Key == "updateavailable") {
+            document.querySelector('.update-div div').innerHTML = 'Обновление доступно! ('+e.data.Value+')';
             document.querySelector('.update-div').style.display = 'flex';
         }
     });
