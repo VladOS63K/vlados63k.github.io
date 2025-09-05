@@ -8,8 +8,8 @@ body {
     grid-template-columns: 260px 75%;
     grid-template-rows: 75px 75%;
     gap: 10px 10px;
-    align-content: stretch;
-    justify-content: stretch;
+    align-content: center;
+    justify-content: center;
     margin:0;
     padding:15px;
     color:white;
@@ -113,7 +113,7 @@ body {
 }
 
 @media screen and (max-width:1030px) {
-    .container {
+    body {
         grid-template-columns: 100%;
         grid-template-rows: 75px 75px 350px 750px;
     }
