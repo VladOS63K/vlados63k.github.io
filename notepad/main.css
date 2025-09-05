@@ -30,6 +30,8 @@ body {
     grid-template-columns: 260px 75%;
     grid-template-rows: 75px 75%;
     gap: 10px 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .loader {
