@@ -3,10 +3,11 @@ body,html {
     margin: 0;
 }
 
-
-
 body {
-    display: flex;
+    display: grid;
+    grid-template-columns: 260px 75%;
+    grid-template-rows: 75px 75%;
+    gap: 10px 10px;
     align-content: stretch;
     justify-content: stretch;
     margin:0;
@@ -23,21 +24,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-.container {
-    display:flex;
-    width:100%;
-    height:100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.inner-container {
-    display: grid;
-    grid-template-columns: 260px 75%;
-    grid-template-rows: 75px 75%;
-    gap: 10px 10px;
 }
 
 .loader {
