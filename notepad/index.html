@@ -29,7 +29,8 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="jquery-3.7.1.min.js"></script>
@@ -42,31 +43,37 @@
             src="https://lottie.host/dc5c98ea-4683-43d1-855a-d18b99f8c0c2/XX9pBY44eB.json" style="width: 320px">
         </lottie-player>
     </div>
-    <div class="new-note">
-        <input type="text" name="note-name" width="40px" placeholder="New note name..." id="new-note-box" value="">
-        <button class="newnote-button" id="create-note-btn" title="Add new note">
-            <img src="https://img.icons8.com/sf-regular/32/FFFFFF/add" width="32px" height="32px" ondragstart="return false;">
-        </button>
-    </div>
-    <div class="tabs" id="tabs">
-    </div>
-    <div class="content">
-        <div id="editing-label" style="color:grey;font-size:10pt;">Editing: none</div>
-        <textarea disabled placeholder="Select note and start typing!"></textarea>
-    </div>
-    <div class="settings">
-        <button class="settings-button" id="backgrnd-selector-btn" title="Change the background">
-            <img src="https://img.icons8.com/sf-regular/48/FFFFFF/sheet-of-paper.png" width="48px" height="48px" ondragstart="return false;">
-        </button>
-        <button class="settings-button" id="backgrnd-clear-btn" title="Clear background">
-            <img src="backgrnd-clear.png" width="48px" height="48px" ondragstart="return false;">
-        </button>
-        <button class="settings-button" id="save-btn" title="Save the note">
-            <img src="https://img.icons8.com/sf-regular/48/FFFFFF/save" width="48px" height="48px" ondragstart="return false;">
-        </button>
-        <button class="settings-button" id="clear-btn" title="Remove all notes... (be careful)">
-            <img src="https://img.icons8.com/sf-regular/48/FFFFFF/trash" width="48px" height="48px" ondragstart="return false;">
-        </button>
+    <div class="container">
+        <div class="new-note">
+            <input type="text" name="note-name" width="40px" placeholder="New note name..." id="new-note-box" value="">
+            <button class="newnote-button" id="create-note-btn" title="Add new note">
+                <img src="https://img.icons8.com/sf-regular/32/FFFFFF/add" width="32px" height="32px"
+                    ondragstart="return false;">
+            </button>
+        </div>
+        <div class="tabs" id="tabs">
+        </div>
+        <div class="content">
+            <div id="editing-label" style="color:grey;font-size:10pt;">Editing: none</div>
+            <textarea disabled placeholder="Select note and start typing!"></textarea>
+        </div>
+        <div class="settings">
+            <button class="settings-button" id="backgrnd-selector-btn" title="Change the background">
+                <img src="https://img.icons8.com/sf-regular/48/FFFFFF/sheet-of-paper.png" width="48px" height="48px"
+                    ondragstart="return false;">
+            </button>
+            <button class="settings-button" id="backgrnd-clear-btn" title="Clear background">
+                <img src="backgrnd-clear.png" width="48px" height="48px" ondragstart="return false;">
+            </button>
+            <button class="settings-button" id="save-btn" title="Save the note">
+                <img src="https://img.icons8.com/sf-regular/48/FFFFFF/save" width="48px" height="48px"
+                    ondragstart="return false;">
+            </button>
+            <button class="settings-button" id="clear-btn" title="Remove all notes... (be careful)">
+                <img src="https://img.icons8.com/sf-regular/48/FFFFFF/trash" width="48px" height="48px"
+                    ondragstart="return false;">
+            </button>
+        </div>
     </div>
 </body>
 
