@@ -1,6 +1,7 @@
 body,html {
     width:100%;
     height: 100%;
+    overflow: hidden;
     margin: 0;
 }
 
@@ -121,6 +122,9 @@ body::after {
 }
 
 @media screen and (max-width:1030px) {
+    html,body {
+        overflow-y: auto;
+    }
     body {
         flex-direction: column;
         grid-template-columns: 100%;
