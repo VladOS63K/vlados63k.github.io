@@ -8,7 +8,6 @@ body {
     grid-template-columns: 260px 75%;
     grid-template-rows: 75px 75%;
     gap: 10px 10px;
-    align-content: center;
     justify-content: center;
     margin:0;
     padding:15px;
