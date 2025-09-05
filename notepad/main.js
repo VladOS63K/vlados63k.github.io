@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         bodyAfter = document.createElement("style");
         bodyAfter.innerHTML =
-            "body:after {background:url(" + content + ");background-size:cover;background-position:center;background-repeat:no-repeat;}";
+            "body:after {background: fixed url(" + content + ");background-size:cover;background-position:center;background-repeat:no-repeat;}";
         document.head.appendChild(bodyAfter);
     }
 
