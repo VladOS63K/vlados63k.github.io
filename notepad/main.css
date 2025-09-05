@@ -23,7 +23,7 @@ body {
     background: #323C4B;
 }
 
-body::after {
+body:after {
     position: absolute;
     top:0;
     left:0;
