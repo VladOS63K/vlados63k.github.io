@@ -127,7 +127,7 @@ body:after {
     align-items: stretch;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1030px) {
     body {
         grid-template-columns: 100%;
         grid-template-rows: 75px 75px 350px 750px;
