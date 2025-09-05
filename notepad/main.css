@@ -114,6 +114,7 @@ body {
 
 @media screen and (max-width:1030px) {
     body {
+        flex-direction: column;
         grid-template-columns: 100%;
         grid-template-rows: 75px 75px 350px 750px;
     }
