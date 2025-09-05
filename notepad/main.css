@@ -11,7 +11,7 @@ body {
     grid-template-rows: 75px 75%;
     gap: 10px 10px;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     margin:0;
     padding:15px;
     color:white;
