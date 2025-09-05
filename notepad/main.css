@@ -10,6 +10,7 @@ body {
     grid-template-rows: 75px 75%;
     gap: 10px 10px;
     justify-content: center;
+    align-content: center;
     margin:0;
     padding:15px;
     color:white;
@@ -128,6 +129,7 @@ body:after {
         overflow-y: auto;
     }
     body {
+        align-content: normal;
         flex-direction: column;
         grid-template-columns: 100%;
         grid-template-rows: 75px 75px 350px 750px;
