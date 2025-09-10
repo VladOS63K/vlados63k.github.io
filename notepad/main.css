@@ -7,7 +7,7 @@ body,html {
 body {
     display: grid;
     grid-template-columns: 260px 75%;
-    grid-template-rows: 85px 75%;
+    grid-template-rows: 95px 75%;
     gap: 10px 10px;
     justify-content: center;
     align-content: center;
@@ -73,6 +73,7 @@ body:after {
 }
 
 .new-note div {
+    margin-top:5px;
     display: flex;
     justify-content: center;
     align-items: center;
