@@ -10,9 +10,9 @@
     <title>VladOS63K Online Notepad</title>
     <meta name="title" content="VladOS63K Online Notepad" />
     <meta name="description" content="Fully free and local notepad." />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-    <meta http-equiv="Pragma" content="no-cache"/>
-    <meta http-equiv="Expires" content="0"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -47,11 +47,21 @@
         </lottie-player>
     </div>
     <div class="new-note">
-        <input type="text" name="note-name" width="40px" placeholder="New note name..." id="new-note-box" value="">
-        <button class="newnote-button" id="create-note-btn" title="Add new note">
-            <img src="https://img.icons8.com/sf-regular/32/FFFFFF/add" width="32px" height="32px"
-                ondragstart="return false;">
-        </button>
+        <script async src="https://telegram.org/js/telegram-widget.js?22"
+            data-telegram-login="vlados63k_notepad_authbot" data-size="medium" data-onauth="onTelegramAuth(user)"
+            data-request-access="write"></script>
+        <script type="text/javascript">
+            function onTelegramAuth(user) {
+                alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+            }
+        </script>
+        <div>
+            <input type="text" name="note-name" width="40px" placeholder="New note name..." id="new-note-box" value="">
+            <button class="newnote-button" id="create-note-btn" title="Add new note">
+                <img src="https://img.icons8.com/sf-regular/32/FFFFFF/add" width="32px" height="32px"
+                    ondragstart="return false;">
+            </button>
+        </div>
     </div>
     <div class="tabs" id="tabs">
     </div>
