@@ -3,6 +3,8 @@ tabs = [];
 var bodyAfter;
 var currentTabKey = null;
 
+var tgData = null;
+
 function loadNotes() {
     var tabsNode = document.getElementById("tabs");
     while (tabsNode.firstChild) {
@@ -113,7 +115,13 @@ $(document).ready(function () {
 })
 
 function onTelegramAuth(user) {
-    alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+    if (checkSignature("8280080921:AAEabQaQrSF8HKORfcQXB-2sa85ntwBP7w0",user)) {
+        console.log('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+        tgData = user;
+    }
+    else {
+        alert('Data is NOT from Telegram');
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
