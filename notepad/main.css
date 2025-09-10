@@ -125,10 +125,8 @@ body:after {
 }
 
 @media screen and (max-width:1030px) {
-    html,body {
-        overflow-y: auto;
-    }
     body {
+        overflow-y: auto;
         align-content: normal;
         flex-direction: column;
         grid-template-columns: 100%;
