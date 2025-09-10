@@ -112,6 +112,10 @@ $(document).ready(function () {
     }, 1500);
 })
 
+function onTelegramAuth(user) {
+    alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const backgrndSelector = document.getElementById("background-selector");
     const backgrndSelectorBtn = document.getElementById("backgrnd-selector-btn");
@@ -119,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const newNoteBtn = document.getElementById("create-note-btn");
     const saveBtn = document.getElementById("save-btn");
     const clearBtn = document.getElementById("clear-btn");
-    
+
     if (window.localStorage.getItem("background") != null) {
         var content = window.localStorage.getItem("background");
         if (bodyAfter != null) {
@@ -148,12 +152,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 bodyAfter.innerHTML =
                     "body:after {background:url(" + content + ");background-size:cover;background-position:center;background-repeat:no-repeat;}";
                 document.head.appendChild(bodyAfter);
-                window.localStorage.setItem("background",content);
+                window.localStorage.setItem("background", content);
             }
         }
     }
 
-    backgrndClearBtn.onclick = function() {
+    backgrndClearBtn.onclick = function () {
         if (bodyAfter != null) {
             document.head.removeChild(bodyAfter);
             bodyAfter = null;
