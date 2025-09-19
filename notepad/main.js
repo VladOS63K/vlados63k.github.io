@@ -114,16 +114,6 @@ $(document).ready(function () {
     }, 1500);
 })
 
-function onTelegramAuth(user) {
-    if (checkSignature("8280080921:AAEabQaQrSF8HKORfcQXB-2sa85ntwBP7w0",user)) {
-        console.log('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-        tgData = user;
-    }
-    else {
-        alert('Data is NOT from Telegram');
-    }
-}
-
 document.addEventListener('DOMContentLoaded', function () {
     const backgrndSelector = document.getElementById("background-selector");
     const backgrndSelectorBtn = document.getElementById("backgrnd-selector-btn");
@@ -204,4 +194,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     loadNotes();
+
 });
