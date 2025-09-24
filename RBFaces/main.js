@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
                 divideRes.forEach(a => {
-                    fetch("https://thumbnails.roblox.com/v1/assets?assetIds=" + JSON.stringify(a).replace("[", "").replace("]", "") + "&returnPolicy=PlaceHolder&size=512x512&format=Png&isCircular=false", { headers: { "Accept": "application/json" } })
+                    fetch("https://corsfix.com/?https://thumbnails.roblox.com/v1/assets?assetIds=" + JSON.stringify(a).replace("[", "").replace("]", "") + "&returnPolicy=PlaceHolder&size=512x512&format=Png&isCircular=false", { headers: { "Accept": "application/json" } })
                         .then(rr => {
                             if (rr.status != 200) {
                                 alert("GET Failed for " + e);
@@ -115,3 +115,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
